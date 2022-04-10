@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import java.util.UUID;
 
 @Entity
-public class UserEntity {
+public class Member {
+
 
     private UUID userId;
-
 
     private String nickName;
 }
