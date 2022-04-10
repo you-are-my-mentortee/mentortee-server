@@ -54,7 +54,7 @@ jobs:
         run: |
           aws s3 cp \
           --region ap-northeast-2 \
-          --acl private \ 
+          --acl private \
 	  ./mentortee-api-build.zip s3://mentortee-deploy/
 
       # Deploy
