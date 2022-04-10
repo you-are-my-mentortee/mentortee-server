@@ -63,7 +63,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws deploy create-deployment \
-          --application-name springboot-intro \
+          --application-name mentortee-api \
           --deployment-group-name mentortee-api \
           --file-exists-behavior OVERWRITE \
           --s3-location bucket=mentortee-deploy,bundleType=zip,key=mentortee-api-build.zip \
