@@ -1,4 +1,4 @@
-package com.mentortee.user.apis;
+package com.mentortee.user.api;
 
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
