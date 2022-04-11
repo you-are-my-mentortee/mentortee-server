@@ -25,4 +25,11 @@ public class QuestionController {
         MainResponse mainResponse = questionService.getMain();
         return ResponseEntity.ok(mainResponse);
     }
+
+//    @ApiOperation(value = "답변하기")
+//    @PostMapping(path = "/question/{questionId}")
+//    public ResponseEntity<Void> getMain(@PathVariable long questionId) {
+//
+//        return ResponseEntity.ok(mainResponse);
+//    }
 }
