@@ -8,10 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
@@ -23,7 +20,7 @@ public class QuestionController {
     private final QuestionService questionService;
 
     @ApiOperation(value = "메인 화면")
-    @PatchMapping(path = "/main")
+    @GetMapping(path = "/main")
     public ResponseEntity<MainResponse> getMain() {
         MainResponse mainResponse = questionService.getMain();
         return ResponseEntity.ok(mainResponse);

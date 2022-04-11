@@ -25,7 +25,7 @@ public class QuestionServiceImpl implements QuestionService{
                 .findAllByQuestionAnonymousAndQuestionBlind(
                         true,
                         false,
-                        PageRequest.of(idx, 1)
+                        PageRequest.of(0,1)
                 );
 
         return MainResponse.from(postPage.get(0));

@@ -4,10 +4,7 @@ import com.mentortee.category.domain.CategoryQuestion;
 import com.mentortee.common.BaseTimeEntity;
 import lombok.Getter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -15,15 +12,14 @@ import java.time.LocalDate;
 public class Question extends BaseTimeEntity {
 
     @Id
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String questionContents;
-    private LocalDate questionDate;
     private boolean questionPublic;
     private boolean questionBlind;
     private boolean questionAnonymous;
 
-    @ManyToOne
-    @JoinColumn(name = "CATEGORY_ID")
+    @OneToOne
+    @JoinColumn(name = "CATEGORY_QUESTION_ID")
     private CategoryQuestion categoryQuestion;
 }
