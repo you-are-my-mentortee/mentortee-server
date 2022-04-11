@@ -1,3 +1,10 @@
+INSERT INTO MEMBER (`NICK_NAME`,`USER_ID`) VALUES ('곰민', '123e4567-e89b-12d3-a456-556642440000');
+INSERT INTO MEMBER (`NICK_NAME`,`USER_ID`) VALUES ('제이슨', 'adfgaldsflakjflkdfaf');
+INSERT INTO MEMBER (`NICK_NAME`,`USER_ID`) VALUES ('비비', 'thhfgsfaldsflakjflkdfaf');
+INSERT INTO MEMBER (`NICK_NAME`,`USER_ID`) VALUES ('데이지', 'qewrqaldsflakjflkdfaf');
+INSERT INTO MEMBER (`NICK_NAME`,`USER_ID`) VALUES ('링고', 'adsfaldsflakjflkdfaf');
+INSERT INTO MEMBER (`NICK_NAME`,`USER_ID`) VALUES ('지쿠', 'adsgewgwraldsflakjflkdfaf');
+
 INSERT INTO CATEGORY (`CATEGORY_CONTENTS`) VALUES ('취향');
 INSERT INTO CATEGORY (`CATEGORY_CONTENTS`) VALUES ('진뼈');
 

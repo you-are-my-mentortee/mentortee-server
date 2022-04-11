@@ -13,5 +13,7 @@ public class AnswerSaveDto {
 
     private boolean answerAnonymous;
 
+    private String nickName;
+
 }
 

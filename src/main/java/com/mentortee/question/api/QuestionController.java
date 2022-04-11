@@ -29,9 +29,8 @@ public class QuestionController {
 
     @ApiOperation(value = "답변하기")
     @PostMapping(path = "/question/{questionId}")
-    public ResponseEntity<Void> getMain(@PathVariable long questionId, @RequestBody AnswerSaveDto answerSaveDto,
-                                        @ApiIgnore String userName) {
-        questionService.answerQuestion(questionId, answerSaveDto, userName);
+    public ResponseEntity<Void> getMain(@PathVariable long questionId, @RequestBody AnswerSaveDto answerSaveDto) {
+        questionService.answerQuestion(questionId, answerSaveDto);
         return ResponseEntity.ok().build();
     }
 }

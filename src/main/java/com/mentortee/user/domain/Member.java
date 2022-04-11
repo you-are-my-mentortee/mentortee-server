@@ -1,6 +1,10 @@
 package com.mentortee.user.domain;
 
 import com.mentortee.common.BaseTimeEntity;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
@@ -11,6 +15,8 @@ import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
+@NoArgsConstructor
+@Getter
 public class Member extends BaseTimeEntity {
 
     @Id
@@ -21,4 +27,10 @@ public class Member extends BaseTimeEntity {
     private UUID userId;
 
     private String nickName;
+
+    @Builder
+    public Member(String nickName){
+        this.nickName = nickName;
+    }
+
 }

@@ -39,8 +39,8 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    public void answerQuestion(long questionId, AnswerSaveDto answerSaveDto, String userName){
-        Member member = memberRepository.findByNickName(userName);
+    public void answerQuestion(long questionId, AnswerSaveDto answerSaveDto){
+        Member member = memberRepository.findByNickName(answerSaveDto.getNickName());
 
         Answer answer = Answer.builder()
                 .answerContent(answerSaveDto.getAnswerContent())
