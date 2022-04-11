@@ -17,6 +17,7 @@ public class MainResponse {
     public String todayDay;
     public String questionContent;
     public String questionCategory;
+    public long questionId;
 
     public static MainResponse from(Question question) {
         LocalDate now = LocalDate.now();
@@ -31,6 +32,7 @@ public class MainResponse {
                 .todayDay(dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.KOREAN))
                 .questionContent(question.getQuestionContents())
                 .questionCategory(question.getCategoryQuestion().getCategory().getCategoryContents())
+                .questionId(question.getId())
                 .build();
     }
 }
