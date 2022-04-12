@@ -32,5 +32,4 @@ public class Member extends BaseTimeEntity {
     public Member(String nickName){
         this.nickName = nickName;
     }
-
 }

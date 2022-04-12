@@ -27,9 +27,16 @@ public class QuestionController {
         return ResponseEntity.ok(mainResponse);
     }
 
+//    @ApiOperation(value = "질문하기")
+//    @PostMapping(path = "/question/")
+//    public ResponseEntity<Void> askQuestion(@PathVariable long questionId, @RequestBody QuestionSaveDto answerSaveDto) {
+//        questionService.answerQuestion(questionId, answerSaveDto);
+//        return ResponseEntity.ok().build();
+//    }
+
     @ApiOperation(value = "답변하기")
     @PostMapping(path = "/question/{questionId}")
-    public ResponseEntity<Void> getMain(@PathVariable long questionId, @RequestBody AnswerSaveDto answerSaveDto) {
+    public ResponseEntity<Void> answerQuestion(@PathVariable long questionId, @RequestBody AnswerSaveDto answerSaveDto) {
         questionService.answerQuestion(questionId, answerSaveDto);
         return ResponseEntity.ok().build();
     }
